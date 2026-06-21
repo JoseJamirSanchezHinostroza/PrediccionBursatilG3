@@ -432,6 +432,13 @@ table.metricas td{padding:9px 13px;font-size:12px;vertical-align:middle;white-sp
 }
 .btn-pm-hamburger svg{width:18px;height:18px;}
 .pm-close{display:none;}
+.btn-sb-hamburger{
+  display:none;width:34px;height:34px;border-radius:9px;
+  border:1px solid var(--border);background:var(--surface);
+  align-items:center;justify-content:center;cursor:pointer;
+  color:var(--text-dim);margin-right:8px;
+}
+.btn-sb-hamburger svg{width:18px;height:18px;}
 
 /* =====================================================================
    TOPBAR (sticky en área principal)
@@ -471,6 +478,7 @@ table.metricas td{padding:9px 13px;font-size:12px;vertical-align:middle;white-sp
   .pm-overlay.activo{display:block;}
   .pm-close{display:flex;margin-left:auto;cursor:pointer;color:var(--text-mute);}
   .btn-pm-hamburger{display:flex;}
+  .btn-sb-hamburger{display:flex;}
   .area-principal{padding:14px 14px 40px;}
 }
 @media (max-width:600px){
@@ -497,58 +505,57 @@ table.metricas td{padding:9px 13px;font-size:12px;vertical-align:middle;white-sp
     </div>
   </div>
   <nav class="sb-nav">
-    <a class="sb-link" href="#" onclick="return false;">
+    <a class="sb-link" href="../9.-DashboardCompleto/09_dashboard_completo_v2.html">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
       Dashboard
     </a>
-    <a class="sb-link" href="#" onclick="return false;">
+    <a class="sb-link" href="../2.-Visualizacion/Html_2.html">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17V9m6 8V5m6 12v-6m6 6V3"/></svg>
-      Mercados
+      Visualización de Mercado
     </a>
-    <a class="sb-link" href="#" onclick="return false;">
+    <a class="sb-link" href="../3.-PrediccionSVC/3_svc_clasificador_tendencia_html.html">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4.2"/><circle cx="12" cy="12" r=".6" fill="currentColor"/></svg>
-      Predicciones IA
+      Predicción SVC
     </a>
-    <a class="sb-link" href="#" onclick="return false;">
+    <a class="sb-link" href="../4.-PrediccionLSTM/4_lstm_regressor_prediccion_html.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 16l5-6 4 3 6-8"/><path d="M16 12l5-7" stroke-dasharray="2 2"/><circle cx="8" cy="10" r="1.1" fill="currentColor" stroke="none"/><circle cx="12" cy="13" r="1.1" fill="currentColor" stroke="none"/></svg>
+      Predicción LSTM
+    </a>
+    <a class="sb-link" href="../5.-AnalisisNLP/Html_5.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13l3 3v13H4z"/><path d="M8 9h9M8 13h9M8 17h5"/></svg>
+      Análisis NLP
+    </a>
+    <a class="sb-link" href="../6.-GeneracionEstrategias/6__Generacion_de_estrategias.html">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v5.2L5.5 16a2 2 0 0 0 1.8 3h9.4a2 2 0 0 0 1.8-3L14 8.2V3"/></svg>
-      Estrategias
+      Estrategias IA
     </a>
-    <a class="sb-link" href="#" onclick="return false;">
+    <a class="sb-link" href="../7.-GestionPortafolio/7__Gestion_de_portafolio.html">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12A9 9 0 1 1 12 3v9z"/><path d="M21 12a9 9 0 0 1-9 9V12z"/></svg>
       Portafolio
     </a>
-    <a class="sb-link" href="#" onclick="return false;">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>
-      Backtesting
-    </a>
-    <a class="sb-link" href="#" onclick="return false;">
+    <a class="sb-link" href="../8.-EnvioSenalesBroker/8_señales_broker.html">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V10a8 8 0 0 1 16 0v9M2 19h20"/></svg>
       Señales &amp; Broker
     </a>
-    <a class="sb-link" href="#" onclick="return false;">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13l3 3v13H4z"/><path d="M8 9h9M8 13h9M8 17h5"/></svg>
-      Noticias NLP
-    </a>
-    <a class="sb-link activo" href="#" onclick="return false;">
+    <a class="sb-link activo" href="../10.-ConsolaModelosIA/10_consola_modelos_ia.html">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1.4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M19 5l-2 2M5 19l2-2M19 19l-2-2"/></svg>
-      Modelos IA
+      Consola Modelos IA
       <span class="sb-badge-mini">Consola</span>
     </a>
-    <a class="sb-link" href="#" onclick="return false;">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M10 13h6M10 17h6M10 9h2"/></svg>
-      Reportes
-    </a>
-    <a class="sb-link" href="#" onclick="return false;">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13.6a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V20a2 2 0 1 1-4 0v-.2a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H4a2 2 0 1 1 0-4h.2a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.9.3H10a1.7 1.7 0 0 0 1-1.5V4a2 2 0 1 1 4 0v.2a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.9V10a1.7 1.7 0 0 0 1.5 1H20a2 2 0 1 1 0 4h-.2a1.7 1.7 0 0 0-1.6 1z"/></svg>
-      Configuración
+    <a class="sb-link" href="../11.-ReportesBacktesting/11_reporte_backtesting.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l3 2M9 2h6"/></svg>
+      Backtesting
     </a>
   </nav>
   <div class="sb-footer">
-    <div class="sb-avatar">MI</div>
+    <div class="sb-avatar">IA</div>
     <div class="sb-user">
-      <div class="nombre">Marco Inversionista</div>
-      <div class="rol">Grupo 10 · iDeSo</div>
+      <div class="nombre">Inversionista</div>
+      <div class="rol">Cuenta activa</div>
     </div>
+    <a href="../1.-Autenticacion/01_autenticacion_v2.html" title="Cerrar sesión" style="flex-shrink:0;width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--text-3,#5b6488);">
+      <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+    </a>
   </div>
 </aside>
 
@@ -645,8 +652,11 @@ table.metricas td{padding:9px 13px;font-size:12px;vertical-align:middle;white-sp
 
     <header class="topbar">
       <div class="tb-left">
-        <div class="btn-pm-hamburger" onclick="togglePanelModelos(true)">
+        <div class="btn-sb-hamburger" onclick="toggleSidebar(true)" title="Abrir menú de navegación">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </div>
+        <div class="btn-pm-hamburger" onclick="togglePanelModelos(true)" title="Abrir panel de modelos">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
         </div>
         <div class="tb-crumb">
           <span class="eyebrow">Modelos IA · Consola de control</span>
