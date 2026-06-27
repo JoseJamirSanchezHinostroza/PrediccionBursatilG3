@@ -353,15 +353,16 @@ body{display:flex;min-height:100vh;}
 // ============================================================
 // CONFIGURACIÓN BACKEND
 // ============================================================
-const API_BASE = 'https://retold-ashen-passable.ngrok-free.dev'; // URL ngrok activa
+// La URL base se lee de localStorage via ivApiBase() (configurada en login)
+// o usa el dominio estático de ngrok como fallback.
+const API_BASE = ivApiBase() || 'https://disorder-unveiling-ditzy.ngrok-free.dev';
 
-// El backend debe exponer este endpoint:
-// GET /api/ohlcv?ticker=AAPL&period=90
-// Respuesta: { ticker, name, crypto, ohlcv: [{date,open,high,low,close,volume},...] }
-// También puede responder con los campos sueltos:
-// { dates:[], O:[], H:[], L:[], C:[], V:[], name, crypto, mcap, dom, sup }
-const OHLCV_ENDPOINT = (ticker, days) => `${API_BASE}/api/ohlcv?ticker=${ticker}&period=${days}`;
-const PRICE_ENDPOINT = (ticker) => `${API_BASE}/api/price/realtime?ticker=${ticker}`;
+// Los endpoints /api/ohlcv y /api/price/realtime NO existen en el backend.
+// Se redirigen a los endpoints reales:
+//   /api/mercado/{ticker}        → OHLCV en vivo + indicadores técnicos
+//   /api/json/mercado/{ticker}   → datos pre-calculados del Notebook 1 (más rápido)
+const OHLCV_ENDPOINT  = (ticker, _days) => `${ivApiBase() || API_BASE}/api/mercado/${encodeURIComponent(ticker)}`;
+const PRICE_ENDPOINT  = (ticker)        => `${ivApiBase() || API_BASE}/api/mercado/${encodeURIComponent(ticker)}`;
 
 // Metadatos de fallback (solo para nombres/config, no precios)
 const CFG = {
